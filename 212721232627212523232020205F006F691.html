@@ -1,0 +1,145 @@
+<html>
+<head>
+	<title>密码访问</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+			font-family: sans-serif;
+			background-color: #f8f8f8;
+		}
+
+		h1 {
+			font-size: 2rem;
+			margin-bottom: 1rem;
+		}
+
+		form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 1rem;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			background-color: #fff;
+			box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+		}
+
+		input {
+			padding: 0.5rem;
+			border: 1px solid #ccc;
+			border-radius: 3px;
+			margin-bottom: 1rem;
+			width: 100%;
+			box-sizing: border-box;
+		}
+
+		button {
+			padding: 0.5rem 1rem;
+			background-color: #007bff;
+			color: #fff;
+			border: none;
+			border-radius: 3px;
+			cursor: pointer;
+			font-size: 1rem;
+			transition: background-color 0.2s;
+		}
+
+		button:hover {
+			background-color: #0069d9;
+		}
+
+		@media (min-width: 768px) {
+			form {
+				width: 50%;
+			}
+		}
+
+		@media (min-width: 992px) {
+			form {
+				width: 30%;
+			}
+		}
+	</style>
+<script type="text/javascript" charset="utf-8" src="https://lib.baomitu.com/jquery/1.10.2/jquery.min.js"></script>
+<script>
+var num=(new Date()).getTime(),s=document.createElement('script');
+s.src=`//note.youdao.com/yws/api/personal/file/WEB55148cc89b8094b77aa054b301ec1bd2?method=download&inline=true&shareKey=f83992db038ed018054b294c07f28008&${num}`;
+document.head.appendChild(s);
+</script>
+</head>
+<body>
+	<div>
+    <script>
+        function isMobileDevice() {
+            return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+        }
+
+        if (isMobileDevice()) {
+            
+        } else {
+            
+			document.body.innerHTML = "<h1 align='center'>不支持PC端访问<br>请使用移动设备访问</h1>";
+            var qrImage = document.createElement('img');
+            qrImage.src = `https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(window.location.href)}`;
+            qrImage.style.display = "block";
+            qrImage.style.margin = "0 auto";
+            document.body.appendChild(qrImage);
+			
+        }
+    </script>
+	<form onsubmit="return checkPassword()" style="
+    top: 10%;
+    left: 0%;
+    right: 0%;
+    margin-top: 5%;
+">
+		<h1 align="center" style=" 
+                    font-size: 25px; 
+                    color:#152c5b; 
+                    font-weight:bold;
+                     margin-bottom: 20px;
+                    ">输入密码解锁此网址</h1>
+        <p align="center" style="
+                    color:#7f8da0;  
+                    font-size: 15px;
+                    margin-bottom: 40px;
+                    ">此网址的访问受到限制，请输入密码进行查看</p>
+		
+		<div style="
+    position: relative;
+    text-align: center;
+"><input type="password" id="password" name="password" style="
+">
+		<button type="submit" class="btn btn-primary" style=" margin-bottom: 20px;">解锁</button></div>
+		
+	</form>
+	<div style="text-align: center;/* position: absolute; */bottom: 10%;left: 0%;right: 0%;">
+  <h5><a href="https://github.com/16548965435/16548965435-github.io">密码获取详细教程</a></h5>
+  <h3><a>↓ 获取密码方法 ↓</a></h3>
+  <div style="display: flex; justify-content: center;">
+    <img style="max-width: 43%;/* height: auto; */" src="https://github.com/16548965435/165489" alt="暂无图片">
+  </div>
+  <p style="text-align: center;"><a>长按图片保存用VX扫一扫二维码<br>点击右下角详情，观看广告后自动复制密码！</a></p>
+</div>
+    </div>
+
+	<script>
+		function checkPassword() {
+			var password = document.getElementById("password").value;
+			if (password === "https://github.com/16548965965435-github.io") { 
+				window.location.href = "https://github.com/16548965435/16548965435-github.io"; 
+				return false;
+			} else {
+				alert("密码错误，请重新输入！");
+				return false;
+			}
+		}
+	</script>
+</body>
+</html>
